@@ -1,0 +1,8 @@
+torch==2.2.0
+transformers==4.40.1
+accelerate==0.30.0
+sentencepiece==0.1.99
+protobuf==4.25.1
+bitsandbytes==0.42.0
+ctransformers==0.2.27
+ipykernel==6.29.0
