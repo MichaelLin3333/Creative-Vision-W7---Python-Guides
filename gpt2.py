@@ -2,13 +2,23 @@
 # You can uncomment this line if transformers isn't installed
 # !pip install transformers torch
 
-# download gpt2 from here https://huggingface.co/openai-community/gpt2
+from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
+# Load pre-trained GPT-2 model and tokenizer
+model_name = "gpt2"  # You can also use "gpt2-medium", "gpt2-large", etc.
+tokenizer = GPT2Tokenizer.from_pretrained(model_name)
+model = GPT2LMHeadModel.from_pretrained(model_name)
+
+# Due to internet issue, you might not be able to use gpt2 via an API call
+# If so, download gpt2 from here https://huggingface.co/openai-community/gpt2
+# and use the following code
+"""
 from transformers import GPT2LMHeadModel, GPT2Tokenizer
 
 model_path = ".gpt2_local"
 tokenizer = GPT2Tokenizer.from_pretrained(model_path)
 model = GPT2LMHeadModel.from_pretrained(model_path)
+"""
 
 # Prepare input prompt
 prompt = "Once upon a time in a futuristic world,"
